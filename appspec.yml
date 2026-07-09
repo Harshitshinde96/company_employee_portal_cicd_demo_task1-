@@ -5,10 +5,10 @@ files:
     destination: /usr/share/nginx/html/
 hooks:
   BeforeInstall:
-    - location: scripts/cleanup.sh
+    - location: cleanup.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location: scripts/reload_nginx.sh
+    - location: reload_nginx.sh
       timeout: 300
       runas: root
