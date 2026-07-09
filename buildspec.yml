@@ -1,0 +1,13 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo "Installing HTML validator..."
+      - npm install -g htmlhint
+  build:
+    commands:
+      - echo "Running HTML Validation on index.html..."
+      - htmlhint index.html
+artifacts:
+  files:
+    - '**/*'
